@@ -7,7 +7,9 @@ const app = express()
 const PORT = process.env.NODE_PORT || 3000
 
 app.get('/', function (req,res){
-    res.sendFile(path.resolve('./html/index.html'))
+    /* res.sendFile(path.resolve('./html/index.html')) */
+    
+    res.sendFile(__dirname + '/html/index.html')
 })
 
 app.get('/sobre', function(req, res){
