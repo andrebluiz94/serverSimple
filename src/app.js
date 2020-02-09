@@ -4,16 +4,14 @@ const path = require('path')
 require('dotenv').config()
 
 const app = express()
-const PORT = process.env.NODE_PORT || 3000
+const PORT = process.env.PORT
 
 app.get('/', function (req,res){
-    /* res.sendFile(path.resolve('./html/index.html')) */
-    
     res.sendFile(__dirname + '/html/index.html')
 })
 
 app.get('/sobre', function(req, res){
-    res.sendFile(path.resolve('./html/sobre.html'))
+    res.sendFile(__dirname + '/html/sobre.html')
 })
 
 app.get('/blog', function(req, res){
